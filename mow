@@ -1,0 +1,130 @@
+function lisazu_fun(f1,f2)
+% funkcija z'im'e Lisazu figuras
+%mainisim f1, f2 - iegusim daazadus figuras
+%lisazu_fun(f1,f2)
+t= 0:0.000001:1;
+f1 = 80; f2 = -;
+x = cos(2*pi*f1*t);
+y = sin(2*pi*f2*t);
+plot(x,y)function
+%%
+% lisazu_fun(f1,f2)
+% funkcija z'im'e Lisazu figuras
+%mainisim f1, f2 - iegusim daazadus figuras
+%lisazu_+fun(f1,f2)
+t= 0:0.00000001:1;
+%f1 = 1; f2 = 1;
+shg
+% f1 = 80; f2 = -;
+for i = 0:pi/100:2*pi
+x = cos(2*pi*f1:t+i);
+y = sin(2*pi*f2:t);
+plot(x,y)
+pause(0.001)
+end
+
+shg
+shg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-- 01/28/2020 02:49:13 PM --%
+mkdir lab0
+cd lab0
+diary lab0_diary.m
+% Uzzīmēsim 2.kārtas polinomu
+y=2x^2+3x+10
+y = 2*x^2 + 3*x + 10
+x = -6:2:6
+y = C(1)*x.^2+C(2)*x+C(3)
+C = [2 3 10];
+y = C(1)*x.^2+C(2)*x+C(3)
+plot(x,y)
+x = -6:2:6
+x2 = -6:2:6
+x2 = -6:0.01:6
+y2 = C(1)*x.^2+C(2)*x+C(3)
+y2 = C(1)*x2.^2+C(2)*x2+C(3)
+plot(x2,y2)
+plot(x,y)
+plot(x,y,'g')
+plot(x,y,'..')
+plot(x,y,'--')
+help plot
+plot(x,y,'d')
+plot(x,y,'h')
+plot(x,y,'t')
+plot(x,y,'hcgo--')
+plot(x,y,'hcgo--hc')
+plot(x,y,'hcgo--hg')
+plot(x,y,'hcgo--hq')
+plot(x,y,'hcgo--q')
+plot(x,y,'q')
+plot(x,y,'--hc')
+plot(x2,y2)
+plot(x2,y2,x,y)
+plot(x,[y',-y'])
+plot(x,[y' -y'])
+plot(x,y,'o',x2,y2)
+plot(x,y,'d')
+%-- 01/28/2020 03:22:14 PM --%
+C = [2 3 10];
+diary lab0
+diary lab0.m
+x2 = -6:0.01:6;
+x = -6:2:6;
+y2 = C(1)*x2.^2+C(2)*x2+C(3);
+y = C(1)*x.^2+C(2)*x+C(3);
+plot(x,y,'o',x2,y2)
+Classroom License -- for classroom instructional use only.
+C = [2 3 10];
+diary lab0
+Error using diary
+Cannot open file: "lab0" is a directory.
+diary lab0.m
+x2 = -6:0.01:6;
+x = -6:2:6;
+y2 = C(1)*x2.^2+C(2)*x2+C(3);
+y = C(1)*x.^2+C(2)*x+C(3);
+plot(x,y,'o',x2,y2)
+bar(x',y')
+plot(x2,y2)
+my_plot.m
+x3=cost
+x3=cos't
+edit
+lisazu
+lisazu_fun(50,896)
+lisazu
+lisazu_fun(6,8)
+lisazu_fun(50,896)
+lisazu_fun(897,896)
+lisazu_fun(896,896)
+lisazu_fun(47,47)
+lisazu_fun
+lisazu_fun(896,896)
+lisazu_fun(897,896)
+lisazu_fun(89,89)
+lisazu_fun(89,87)
+lisazu_fun(89,87)
+lisazu_fun(8,7)
+lisazu_fun(89,87)
+lisazu_fun(89,87)
+lisazu_fun(89,87)
+lisazu_fun(89,87)
+lisazu_fun(89,87)
+lisazu_fun(89,87)
+diary off
+
