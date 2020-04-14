@@ -1,0 +1,52 @@
+%% Laborotorijas darbs 5
+% Deniss Sadovskis REBMO-2 191REB152
+
+%% Uzdevumi
+% Atkartosana tas , kas bija klase;
+% Izmantot signalu no 3 lab ;
+% Ielikt diodi no uzdevuma (i0,a);
+% Jaatrod a;
+% Atrast u uzzimet uz viena grafika; 
+% Ieejas un Izejas (E , UR);
+% Uztaisit atskaiti;
+% ieklaut visas 4 funkcijas ;
+
+
+% 1.Funkcija 
+function lab5
+global E R i0 a
+Ud = 2;
+id = 0.18;
+% a = solve(id==io*(exp(a*Ud)-1),a) apreikina a
+R=1; i0 =3e-06; a=2;
+t= 0:0.01:5.5;
+% Et = lab3_deniss_sadovskis(t) atrodas uz nulles, taapeec to reizinam ar konstanti
+Et = 10*lab3_deniss_sadovskis(t);
+
+URm = [];
+for E = Et
+    UR = newmet5;
+    URm = [URm,UR];
+end
+plot(t,Et,t,URm)
+legend('Et','UR')
+
+% 2.Funkcija
+function x0 = newmet5
+epsilon = 1e-3;
+x0 = 0;
+delta = funx(x0)/fund(x0);
+while(abs(delta)>epsilon)
+delta = funx(x0)/fund(x0);
+x0 = x0-delta;
+end
+
+% 3.Funkcija
+function fx = funx(UR)
+global E R i0 a
+fx = i0*(exp(a*(E-UR))-1)-UR/R;
+
+% 4.Funkcija
+function fx = fund(UR)
+global E R i0 a
+fx = - 1/R - a*i0*exp(a*(E - UR));
