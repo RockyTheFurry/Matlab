@@ -1,0 +1,36 @@
+function y = lab3_deniss_sadovskis(t)
+if nargin == 0
+    t = 0:0.01:6;
+end
+%t_saw = 1.5:0.01:3;
+t_sawf = (t>=1.5)&(t<3); t_saw = t(t_sawf);
+%t_zero = 0.5:0.01:1.5;
+t_zerof = (t>=0.5)&(t<1.5); t_zero = t(t_zerof);
+%t_noise = 3:0.01:5;
+t_noisef = (t>=3)&(t<5); t_noise = t(t_noisef);
+%t_const = 5:0.01:6;
+t_constf = (t>=5)&(t<6); t_const = t(t_constf);
+%t_sin = 0:0.01:0.5;
+t_sinf = (t>=0)&(t<0.5); t_sin = t(t_sinf);
+%% Sinusoida
+A0=0; A=2;
+T = (0.5-0)/2;f = 1/T;delay=0;
+y_sin=A0+A*sin(2*pi*f*(t_sin-delay));
+%% Lineari mainiga funkcija
+k = (0.75-0)/(1.5-3);
+delay = 3;
+y_saw = k*(t_saw-delay);
+%% Nullu signals
+y_zero = zeros(size(t_zero));
+%% Konstantes signals 
+y_const = zeros(size(t_const))+2;
+%% Troksna signals
+y_noise = 2*rand(size(t_noise))-1;
+%% Apvienosim visu vina vektora
+t = [t_sin,t_zero,t_saw,t_noise,t_const];
+y = [y_sin,y_zero,y_saw,y_noise,y_const];
+if nargout == 0
+    plot(t,y);
+    y = [];
+end
+axis([0 6 -2.5 2.5])
